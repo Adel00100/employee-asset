@@ -4,6 +4,32 @@ body.dark-mode {
   background: #121a27;
 }
 
+.dark-mode .dashboard-page {
+  color: #e6edf7;
+  background: #121a27;
+}
+
+.dark-mode .app-navbar {
+  color: #e6edf7;
+  background: #1b2636;
+  border-bottom-color: #344256;
+}
+
+.dark-mode .app-navbar .navbar-brand,
+.dark-mode .app-navbar .navbar-nav .nav-link,
+.dark-mode .app-navbar .navbar-nav .nav-link:hover,
+.dark-mode .app-navbar .navbar-nav .nav-link.active {
+  color: #e6edf7;
+}
+
+.dark-mode .app-navbar .navbar-toggler {
+  border-color: #526176;
+}
+
+.dark-mode .app-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
 .dark-mode .theme-switch {
   background: #2f3a4a;
 }
@@ -16,6 +42,103 @@ body.dark-mode {
   background: #1b2636;
   border-color: #344256;
   box-shadow: 0 12px 32px rgb(0 0 0 / 22%);
+}
+
+.dark-mode .dashboard.welcome {
+  color: #e6edf7;
+ 
+}
+
+.dark-mode .dashboard.stats > .card-title {
+  color: #f2f6fc;
+}
+
+.dark-mode .stat-card {
+  --bs-card-bg: #1b2636;
+  --bs-card-color: #e6edf7;
+  color: #e6edf7;
+  background: #1b2636;
+  border-color: #344256;
+  border-top-color: #78b99b;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 16%);
+}
+
+.dark-mode .stat-card:hover {
+  box-shadow: 0 8px 20px rgb(0 0 0 / 24%);
+}
+
+.dark-mode .stat-label {
+  color: #b0bfd2;
+}
+
+.dark-mode .stat-value {
+  color: #a4d7bc;
+}
+
+.dark-mode .assignment-panel {
+  color: #e6edf7;
+  background: #1b2636;
+  border-color: #344256;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 18%);
+}
+
+.dark-mode .assignment-heading {
+  border-bottom-color: #344256;
+}
+
+.dark-mode .assignment-title,
+.dark-mode .employee-details {
+  color: #e6edf7;
+}
+
+.dark-mode .assignment-subtitle,
+.dark-mode .employee-details small {
+  color: #9eacc0;
+}
+
+.dark-mode .view-all {
+  color: #a4d7bc;
+}
+
+.dark-mode .view-all:hover {
+  color: #c4ead4;
+}
+
+.dark-mode .assignment-table th {
+  color: #a2afc2;
+  background: #202d40;
+}
+
+.dark-mode .assignment-table td {
+  color: #e0e8f2;
+  border-bottom-color: #2d3a4d;
+}
+
+.dark-mode .assignment-table tbody tr:nth-child(even) {
+  background: #1d2939;
+}
+
+.dark-mode .assignment-table tbody tr:hover {
+  background: #26384a;
+}
+
+.dark-mode .asset-code {
+  color: #c2cfdf;
+  background: #2a374a;
+}
+
+.dark-mode .assignment-table time {
+  color: #b1c2d8;
+}
+
+.dark-mode .status-active {
+  color: #9ce0b1;
+  background: #203b32;
+}
+
+.dark-mode .status-returned {
+  color: #c4ccda;
+  background: #303b4b;
 }
 
 .dark-mode h5 {
