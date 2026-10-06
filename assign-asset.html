@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assign Device | CorpGear Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="light.css">
+  <link rel="stylesheet" href="dark.css">
+</head>
+<body class="workspace-app">
+  <header class="navbar navbar-expand-lg navbar-light app-navbar sticky-top">
+    <div class="container-fluid workspace-nav">
+      <a class="navbar-brand" href="dashboard.html"><span class="brand-mark" aria-hidden="true"></span>CorpGear <span class="brand-light">Hub</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <nav class="collapse navbar-collapse" id="navbarNav" aria-label="Main navigation">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="assets.html">Inventory</a></li>
+          <li class="nav-item"><a class="nav-link" href="emp_mock.html">Employees</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="assign-asset.html">Assign device</a></li>
+          <li class="nav-item theme-item"><button class="theme-switch" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode"><span class="knob"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4-1.4M2 12h2M20 12h2M4.9 19.1l-1.4 1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></span></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="workspace-page" aria-labelledby="page-title">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="dashboard.html">Overview</a><span aria-hidden="true">/</span><a href="assets.html">Inventory</a><span aria-hidden="true">/</span><span aria-current="page">Assign device</span></nav>
+    <div class="page-heading form-page-heading"><div><p class="eyebrow">PEOPLE OPERATIONS <span>/</span> HARDWARE</p><h1 id="page-title">Assign or register a device</h1><p class="page-intro">Keep each purchase and employee handoff in one clear record.</p></div></div>
+    <section class="form-panel" aria-labelledby="form-section-title">
+      <div class="form-panel-heading"><div><h2 id="form-section-title">Device details</h2><p>Fields marked <span aria-hidden="true">*</span> are required.</p></div></div>
+      <form id="assignment-form" class="asset-form">
+        <fieldset class="mode-fieldset">
+          <legend>Choose an action</legend>
+          <div class="mode-switch" role="radiogroup" aria-label="Device action">
+            <input class="btn-check" type="radio" name="form-mode" id="mode-existing" value="existing" checked>
+            <label for="mode-existing">Assign or reassign</label>
+            <input class="btn-check" type="radio" name="form-mode" id="mode-purchase" value="new">
+            <label for="mode-purchase">Register a purchase</label>
+          </div>
+        </fieldset>
+
+        <div class="form-grid" id="existing-fields">
+          <div class="form-field form-field-wide"><label for="existing-asset">Asset <span aria-hidden="true">*</span></label><select id="existing-asset" name="asset"><option value="">Loading assets...</option></select></div>
+          <div class="form-field"><label for="assignee">Assign to employee <span class="optional-label">Optional</span></label><select id="assignee" name="employee"><option value="">Keep in storage</option></select><small>Choose a new employee to reassign, or keep the asset in storage.</small></div>
+        </div>
+
+        <div class="form-grid" id="purchase-fields" hidden>
+          <div class="form-field"><label for="new-asset-tag">Asset tag</label><input id="new-asset-tag" value="Generated on save" readonly></div>
+          <div class="form-field"><label for="new-manufacturer">Manufacturer <span aria-hidden="true">*</span></label><select id="new-manufacturer" data-required="true"><option value="">Select manufacturer</option><option>Apple</option><option>Dell</option><option>HP</option><option>Lenovo</option><option>Logitech</option><option>Samsung</option><option>Microsoft</option><option>Other</option></select></div>
+          <div class="form-field"><label for="new-model">Model <span aria-hidden="true">*</span></label><input id="new-model" autocomplete="off" data-required="true"></div>
+          <div class="form-field"><label for="new-type">Device type <span aria-hidden="true">*</span></label><select id="new-type" data-required="true"><option value="">Select device type</option><option>Laptop</option><option>Phone</option><option>Tablet</option><option>Monitor</option><option>Keyboard</option><option>Accessory</option></select></div>
+          <div class="form-field"><label for="purchase-date">Purchase date <span aria-hidden="true">*</span></label><input id="purchase-date" type="date" data-required="true"></div>
+          <div class="form-field"><label for="warranty-date">Warranty expiry <span aria-hidden="true">*</span></label><input id="warranty-date" type="date" data-required="true"></div>
+          <div class="form-field form-field-wide"><label for="new-assignee">Assign to employee <span class="optional-label">Optional</span></label><select id="new-assignee"><option value="">Keep in storage</option></select></div>
+        </div>
+
+        <div class="form-grid assignment-date-row" id="assignment-date-field"><div class="form-field"><label for="assignment-date">Assignment date <span aria-hidden="true">*</span></label><input id="assignment-date" type="date"></div></div>
+        <div class="form-actions"><button class="button-primary" id="save-assignment" type="submit">Save assignment</button><a class="button-secondary" href="assets.html">Cancel</a></div>
+        <p class="form-message" id="form-message" role="status" aria-live="polite" tabindex="-1"></p>
+      </form>
+    </section>
+    <aside class="prototype-note"><strong>Frontend demo:</strong> fictional records and changes are stored only in this browser. No server, database, authentication, or permissions are connected.</aside>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="tracker.js"></script>
+</body>
+</html>

@@ -141,6 +141,31 @@ body.dark-mode {
   background: #303b4b;
 }
 
+.dark-mode .asset-item {
+  color: #e6edf7;
+}
+
+.dark-mode .asset-category {
+  color: #9eacc0;
+}
+
+.dark-mode .assign-button {
+  color: #14241d;
+  background: #a4d7bc;
+  border-color: #a4d7bc;
+}
+
+.dark-mode .assign-button:hover:not(:disabled) {
+  background: #c4ead4;
+  border-color: #c4ead4;
+}
+
+.dark-mode .assign-button:disabled {
+  color: #aab6c6;
+  background: #303b4b;
+  border-color: #303b4b;
+}
+
 .dark-mode h5 {
   color: #f2f6fc;
 }
@@ -189,4 +214,108 @@ body.dark-mode {
 
 .dark-mode footer {
   color: #9aa9bd;
+}
+
+.dark-mode.workspace-app {
+  --workspace-ink: #e6edf1;
+  --workspace-muted: #9baab0;
+  --workspace-line: #34434a;
+  --workspace-paper: #141d20;
+  color: var(--workspace-ink);
+  background: var(--workspace-paper);
+}
+
+.dark-mode.workspace-app .app-navbar {
+  background: #1b2729;
+  border-bottom-color: #34434a;
+}
+
+.dark-mode.workspace-app .navbar-brand,
+.dark-mode.workspace-app .navbar-brand .brand-light { color: #e6edf1; }
+.dark-mode.workspace-app .navbar-brand .brand-light { color: #9baab0; }
+.dark-mode.workspace-app .navbar-nav .nav-link { color: #b7c3c3; }
+.dark-mode.workspace-app .navbar-nav .nav-link.active,
+.dark-mode.workspace-app .navbar-nav .nav-link:hover { color: #b8dfc5; background: #273a32; }
+.dark-mode.workspace-app .navbar-nav .nav-link.nav-action { color: #172a25; background: #a8d3b6; }
+.dark-mode.workspace-app .navbar-nav .nav-link.nav-action:hover { background: #c0e4ca; }
+.dark-mode.workspace-app .navbar-toggler { border-color: #526176; }
+.dark-mode.workspace-app .navbar-toggler-icon { filter: invert(1); }
+.dark-mode .eyebrow,
+.dark-mode .page-intro,
+.dark-mode .dashboard.welcome .intro,
+.dark-mode .today-label,
+.dark-mode .stat-detail,
+.dark-mode .insight-heading p:not(.eyebrow),
+.dark-mode .section-toolbar p,
+.dark-mode .form-panel-heading p,
+.dark-mode .page-footnote,
+.dark-mode .breadcrumbs { color: #9baab0; }
+.dark-mode .dashboard.welcome { background: transparent; border-bottom-color: #34434a; }
+.dark-mode .dashboard.welcome .card-title,
+.dark-mode .page-heading h1,
+.dark-mode .employee-profile h1,
+.dark-mode .insight-heading h2,
+.dark-mode .section-toolbar h2,
+.dark-mode .form-panel-heading h2 { color: #edf3f3; }
+.dark-mode .button-secondary { color: #d5e0de; background: #202d30; border-color: #46575c; }
+.dark-mode .button-secondary:hover { background: #2a393c; }
+.dark-mode .today-label { color: #b2c1bc; }
+.dark-mode .inventory-health,
+.dark-mode .warranty-watch,
+.dark-mode .directory-section,
+.dark-mode .form-panel,
+.dark-mode .employee-profile { color: #e6edf1; background: #1b2729; border-color: #34434a; }
+.dark-mode .employee-profile { border-left-color: #7fbd91; }
+.dark-mode .section-toolbar,
+.dark-mode .form-panel-heading,
+.dark-mode .directory-table tbody tr,
+.dark-mode .mode-fieldset,
+.dark-mode .form-actions { border-color: #34434a; }
+.dark-mode .filter-bar { background: #202d30; border-color: #34434a; }
+.dark-mode .filter-bar label,
+.dark-mode .asset-form label,
+.dark-mode .mode-fieldset legend { color: #c5d1d0; }
+.dark-mode .filter-bar input,
+.dark-mode .filter-bar select,
+.dark-mode .asset-form input,
+.dark-mode .asset-form select { color: #e6edf1; background: #141d20; border-color: #495a5e; }
+.dark-mode .asset-form [readonly] { color: #afbcba; background: #202d30; }
+.dark-mode .filter-bar input::placeholder { color: #93a3a4; }
+.dark-mode .filter-clear,
+.dark-mode .text-link,
+.dark-mode .table-action,
+.dark-mode .directory-table .employee-link { color: #b8dfc5; }
+.dark-mode .demo-note { color: #bedac5; background: #294034; }
+.dark-mode .profile-role { color: #aab9b7; }
+.dark-mode .profile-facts { border-color: #34434a; }
+.dark-mode .profile-facts dt,
+.dark-mode .warranty-list small { color: #9baab0; }
+.dark-mode .profile-facts dd,
+.dark-mode .meter-legend strong,
+.dark-mode .warranty-list a { color: #e6edf1; }
+.dark-mode .meter-total { color: #9baab0; }
+.dark-mode .assignment-meter { background: #2b383b; }
+.dark-mode .warranty-list li { border-color: #34434a; }
+.dark-mode .warranty-state.is-due { color: #f0cf8e; background: #47391f; }
+.dark-mode .warranty-state.is-expired { color: #ffc0b8; background: #492b2b; }
+.dark-mode .warranty-covered { color: #b9ddc3; background: #253b2e; }
+.dark-mode .warranty-due { color: #f0cf8e; background: #47391f; }
+.dark-mode .warranty-expired { color: #ffc0b8; background: #492b2b; }
+.dark-mode .status-storage { color: #bdc9c6; background: #2b383b; }
+.dark-mode .muted-value,
+.dark-mode .form-field small,
+.dark-mode .optional-label { color: #9baab0; }
+.dark-mode .mode-switch { background: #141d20; }
+.dark-mode .mode-switch label { color: #b3c1bf; }
+.dark-mode .mode-switch input:checked + label { color: #e6edf1; background: #34434a; }
+.dark-mode .prototype-note { color: #bcc8c5; background: #202d30; border-left-color: #7fbd91; }
+.dark-mode .prototype-note strong { color: #e6edf1; }
+.dark-mode .form-message { color: #a8d3b6; }
+.dark-mode .form-message.message-error { color: #ffaaa0; }
+
+@media (max-width: 575.98px) {
+  .dark-mode .directory-table tbody tr,
+  .dark-mode .employee-device-table tbody tr { border-bottom-color: #34434a; }
+  .dark-mode .directory-table tbody td::before,
+  .dark-mode .employee-device-table tbody td::before { color: #9baab0; }
 }

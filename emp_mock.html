@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Detail | CorpGear Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="light.css">
+	<link rel="stylesheet" href="dark.css">
+</head>
+<body class="workspace-app">
+<header class="navbar navbar-expand-lg navbar-light app-navbar sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="dashboard.html"><span class="brand-mark" aria-hidden="true"></span>CorpGear <span class="brand-light">Hub</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="collapse navbar-collapse" id="navbarNav" aria-label="Main navigation">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="assets.html">Inventory</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="emp_mock.html">Employees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="assign-asset.html">Assign device</a>
+          </li>
+          <li class="nav-item theme-item">
+            <button class="theme-switch" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode">
+              <span class="knob">
+                <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+                <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="workspace-page" aria-labelledby="employee-name">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="dashboard.html">Overview</a><span aria-hidden="true">/</span><a href="assets.html">Inventory</a><span aria-hidden="true">/</span><span aria-current="page">Employee detail</span></nav>
+    <section class="employee-profile" id="employee-profile" aria-labelledby="employee-name">
+      <div class="employee-profile-identity">
+        <span class="profile-avatar avatar" id="employee-avatar" aria-hidden="true">AA</span>
+        <div><p class="eyebrow">EMPLOYEE PROFILE</p><h1 id="employee-name">Adel Ahmed</h1><p class="profile-role"><span id="employee-title">Software Engineer</span><span aria-hidden="true">·</span><span id="employee-department">Engineering</span></p></div>
+      </div>
+      <dl class="profile-facts">
+        <div><dt>Employee ID</dt><dd id="employee-number">EMP-001</dd></div>
+        <div><dt>Office</dt><dd id="employee-office">London</dd></div>
+      </dl>
+    </section>
+
+    <section class="directory-section" aria-labelledby="employee-assets-title">
+      <div class="section-toolbar"><div><h2 id="employee-assets-title">Assigned devices</h2><p id="assigned-device-count">Loading devices</p></div><a class="text-link" id="employee-profile-link" href="assets.html">See inventory</a></div>
+      <div class="table-responsive"><table class="assignment-table directory-table employee-device-table"><thead><tr><th scope="col">Asset tag</th><th scope="col">Make / model</th><th scope="col">Purchase date</th><th scope="col">Warranty expires</th><th scope="col">Status</th></tr></thead><tbody id="employee-assets"><tr><td colspan="5">Loading devices...</td></tr></tbody></table></div>
+    </section>
+    <p class="page-footnote">Read-only employee view · Fictional demo records</p>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="tracker.js"></script>
+
+</body>
+</html>
